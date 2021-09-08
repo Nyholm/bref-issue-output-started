@@ -1,0 +1,15 @@
+{
+    "name": "tobias/bref-issue-output-started",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nyholm",
+            "email": "tobias.nyholm@gmail.com"
+        }
+    ],
+    "require": {
+        "bref/bref": "^1.2",
+        "nyholm/psr7": "^1.4"
+    }
+}

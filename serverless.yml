@@ -1,0 +1,25 @@
+service: bref-issue-output-started
+
+provider:
+    name: aws
+    region: eu-central-1
+    runtime: provided.al2
+    environment:
+        BREF_LOOP_MAX: 100
+
+plugins:
+    - ./vendor/bref/bref
+
+functions:
+    hello:
+        handler: index.php
+        description: ''
+        layers:
+            - ${bref:layer.php-80}
+        events:
+            - httpApi: '*'
+
+# Exclude files from deployment
+package:
+    patterns:
+        - '!tests/**'
